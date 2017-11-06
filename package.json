@@ -1,6 +1,6 @@
 {
   "name": "fastify-gundb",
-  "version": "0.2.0",
+  "version": "0.1.0",
   "description": "Fastify GunDB connection plugin",
   "main": "index.js",
   "scripts": {
