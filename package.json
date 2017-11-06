@@ -1,0 +1,35 @@
+{
+  "name": "fastify-gundb",
+  "version": "0.2.0",
+  "description": "Fastify GunDB connection plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && tap test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lmangani/fastify-gundb.git"
+  },
+  "keywords": [
+    "fastify",
+    "gun",
+    "gundb",
+    "database",
+    "connection"
+  ],
+  "author": "Lorenzo Mangani (lorenzo.mangani@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lmangani/fastify-gundb/issues"
+  },
+  "homepage": "https://github.com/lmangani/fastify-gundb#readme",
+  "devDependencies": {
+    "fastify": "^0.30.2",
+    "standard": "^10.0.3",
+    "tap": "^10.7.2"
+  },
+  "dependencies": {
+    "fastify-plugin": "^0.1.1",
+    "gun": "^0.8.9"
+  }
+}
