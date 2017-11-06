@@ -1,3 +1,7 @@
+<p>
+    <a href="http://gun.js.org/"><img width="25%" src="https://cldup.com/TEy9yGh45l.svg"/></a>
+</p> 
+
 # fastify-gundb
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)  [![Build Status](https://travis-ci.org/lmangani/fastify-gundb.svg?branch=master)](https://travis-ci.org/lmangani/fastify-gundb)
@@ -23,7 +27,7 @@ fastify.register(require('fastify-gundb'), {
 
 fastify.get('/foo', (req, reply) => {
   const { gun } = fastify.gun
-  gun.get(req.query.key, (val) => {
+  gun.get(req.query.key).val(function(val){
     if (!val) val = { status: 404 }  
     reply.send(val)
   })
@@ -31,10 +35,9 @@ fastify.get('/foo', (req, reply) => {
 
 fastify.post('/foo', (req, reply) => {
   const { gun } = fastify.gun
-  
-  gun.get('key').put({hello: "world"}, function(ack){
-    if (!ack) val = { status: 404 }  
-    else reply.send({ status: 'ok' })
+  gun.get(req.body.key).put(req.body.value, (ack) => {
+    if (!ack) val = { status: 'error' }  
+    reply.send({ status: 'ok' })
   })
 })
 
