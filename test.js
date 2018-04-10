@@ -35,7 +35,7 @@ test('gun should support gundb operations', t => {
     .register(gunPlugin, { name: 'test' })
     .ready(err => {
       t.error(err)
-      fastify.gun.get('test').set('d').val(function (val) {
+      fastify.gun.get('test').set('d').once(function (val) {
         if (!val) t.error('no data')
         t.equal('d', val)
       })

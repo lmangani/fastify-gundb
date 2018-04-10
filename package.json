@@ -1,6 +1,6 @@
 {
   "name": "fastify-gundb",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Fastify GunDB connection plugin",
   "main": "index.js",
   "scripts": {
@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "fastify-plugin": "^0.1.1",
-    "gun": "^0.9.7"
+    "gun": "^0.9.991",
+    "rimraf": "^2.6.2"
   }
 }
