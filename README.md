@@ -27,7 +27,7 @@ fastify.register(require('fastify-gundb'), {
 
 fastify.get('/foo', (req, reply) => {
   const { gun } = fastify.gun
-  gun.get(req.query.key).val(function(val){
+  gun.get(req.query.key).once(function(val){
     if (!val) val = { status: 404 }  
     reply.send(val)
   })
