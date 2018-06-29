@@ -24,13 +24,13 @@
   },
   "homepage": "https://github.com/lmangani/fastify-gundb#readme",
   "devDependencies": {
-    "fastify": "^0.30.2",
+    "fastify": "^1.7.0",
     "standard": "^10.0.3",
     "tap": "^10.7.2"
   },
   "dependencies": {
     "fastify-plugin": "^0.1.1",
-    "gun": "^0.9.991",
+    "gun": "^0.9.9992",
     "rimraf": "^2.6.2"
   }
 }
